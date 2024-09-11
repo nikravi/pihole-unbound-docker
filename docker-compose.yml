@@ -15,8 +15,8 @@ services:
           memory: 256M
     ports:
       - "8080:80/tcp" # web ui -> http://localhost:8080/admin
-      - "53:53/tcp" # DNS tcp port is used as fallback for longer dns messages
-      - "53:53/udp" # DNS port
+      - "192.168.20.215:53:53/tcp" # DNS tcp port is used as fallback for longer dns messages
+      - "192.168.20.215:53:53/udp" # DNS port
 # RECOMMENDED: Uncomment and adapt if you want to persist pihole configurations after restart
     volumes:
       - "/data/docker/pihole/pihole:/etc/pihole/"
